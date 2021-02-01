@@ -12,6 +12,7 @@ namespace ClipboardImageToFile
         [STAThread]
         static void Main(string[] args)
         {
+            Console.WriteLine(@"example: ClipboardImageToFile.exe --secondsToWait 5 --imagePath C:\screen.png");
             Clipboard.SetText(" ");
             string secondsToWait = args.Length>1? args[1]: "5";
             string imagePath = args.Length > 3 ? args[3] : @"C:\screen.png";
